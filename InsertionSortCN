@@ -1,0 +1,31 @@
+Divide the array into 2 parts:- sorted and unsorted. We start from the second position.
+
+Let ‘ARR’ be: [1, 4, 2]
+The sorted array will be: [1, 2, 4].
+
+***********************************************************************************************************************************************************************
+
+import java.util.* ;
+import java.io.*; 
+
+public class Solution {
+
+	public static void insertionSort(int n , int[] arr) {
+		// Write your code here.
+
+		for(int i=1; i<arr.length; i++){
+			int key = arr[i];
+			int j = i-1;
+
+			while(j>=0 && arr[j]> key){
+				arr[j+1] = arr[j];
+				j = j-1;
+
+			}
+
+			arr[j+1]= key;
+		}
+		return;
+	}
+
+}
